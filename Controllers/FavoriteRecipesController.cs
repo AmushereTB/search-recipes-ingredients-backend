@@ -91,7 +91,7 @@ namespace LastProject.API.Controllers
         }
 
         // DELETE: api/FavoriteRecipes/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{idMeal}")]
         public async Task<IActionResult> DeleteRecipe(string idMeal)
         {
             var recipe = await _context.Recipe.FindAsync(idMeal);

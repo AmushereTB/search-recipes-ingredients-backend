@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 public class Recipe
 {
-    [Key]
+    public int Id { get; set; }
     public string idMeal { get; set; }
     [StringLength(30)]
     public string strMeal { get; set; }

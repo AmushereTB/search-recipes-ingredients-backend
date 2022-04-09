@@ -1,14 +1,5 @@
 #nullable disable
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using LastProject.API;
-using System.Text.Json.Serialization;
-using System.ComponentModel.DataAnnotations;
 using RestSharp;
 using System.Text.Json;
 
@@ -122,11 +113,3 @@ namespace LastProject.API.Controllers
     }
 
 }
-            // var makeItWork = (from f in finalDishIng1
-            //                 join g in finalDishIng2 on f.strMeal equals g.strMeal
-            //                 select new SearchResultDTO
-            //                 {
-            //                     idMeal = f.idMeal,
-            //                     strMeal = f.strMeal,
-            //                     strMealThumb = f.strMealThumb 
-            //                 }).ToList();

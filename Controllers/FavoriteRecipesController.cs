@@ -94,7 +94,7 @@ namespace LastProject.API.Controllers
         [HttpDelete("{idMeal}")]
         public async Task<IActionResult> DeleteRecipe(string idMeal)
         {
-            var recipe = await _context.Recipe.FindAsync(idMeal);
+            var recipe = await _context.Recipe.FirstOrDefaultAsync(e => e.idMeal == idMeal);
             if (recipe == null)
             {
                 return NotFound();

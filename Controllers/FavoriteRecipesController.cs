@@ -91,10 +91,10 @@ namespace LastProject.API.Controllers
         }
 
         // DELETE: api/FavoriteRecipes/5
-        [HttpDelete("{idMeal}")]
-        public async Task<IActionResult> DeleteRecipe(string idMeal)
+        [HttpDelete("{idMeal},{googleId}")]
+        public async Task<IActionResult> DeleteRecipe(string idMeal, string googleId)
         {
-            var recipe = await _context.Recipe.FirstOrDefaultAsync(e => e.idMeal == idMeal);
+            var recipe = await _context.Recipe.FirstOrDefaultAsync(e => e.idMeal == idMeal && e.GoogleId == googleId);
             if (recipe == null)
             {
                 return NotFound();
